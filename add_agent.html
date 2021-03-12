@@ -1,0 +1,59 @@
+<html>  
+<head>  
+    <title>PHP login system</title>   
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+<body>  
+    <div id = "frm">  
+        <h1>ADMIN Login</h1>  
+        <form name="f1" action = "authentication2.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label>  Agent name: </label>  
+                <input type = "text" id ="aname" name  = "aname" />  
+            </p>  
+            <p>
+                <label>mobile no:</label>
+                <input type="text" id="mobileno" name="mobileno"/>
+            </p>
+             <p>
+                <label>password</label>
+                <input type="text" id="pass" name="pass"/>
+            </p>
+            
+            <p>     
+                <input type =  "submit" id = "btn" value = "AddBus" />  
+            </p> 
+        </form>  
+    </div> 
+     
+    // validation for empty field   
+    <script>  
+            function validation()  
+            {  
+                var agent=document.f1.aname.value;  
+                var mobileno=document.f1.mobileno.value;
+                var pass=document.f1.pass.value;
+
+                if(agent.length=="" && mobileno.length==""&& pass.length=="") {  
+                    alert("User agentname and mobileno and password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(agent.length=="") {  
+                        alert("agent name Name is empty");  
+                        return false;  
+                    }   
+                    if (mobileno.length=="") {  
+                    alert("mobile no field is empty");  
+                    return false;  
+                    } 
+                    if (pass.length=="") {  
+                    alert("password field is empty");  
+                    return false; 
+                    }   
+                    } 
+                }                             
+        </script>  
+</body>     
+</html>  

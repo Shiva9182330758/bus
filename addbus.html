@@ -1,0 +1,76 @@
+<html>  
+<head>  
+    <title>PHP login system</title>   
+    <link rel = "stylesheet" type = "text/css" href = "style.css">   
+</head>  
+<body>  
+    <div id = "frm">  
+        <h1>ADMIN Login</h1>  
+        <form name="f1" action = "authentication1.php" onsubmit = "return validation()" method = "POST">  
+            <p>  
+                <label>  Bus Name: </label>  
+                <input type = "text" id ="bname" name  = "bname" />  
+            </p>  
+            <p>
+                <label>from:</label>
+                <input type="text" id="from" name="from"/>
+            </p>
+             <p>
+                <label>from:</label>
+                <input type="text" id="to" name="to"/>
+            </p>
+             <p>
+                <label>Total Seat:</label>
+                <input type="text" id="seat" name="seat"/>
+            </p>
+             <p>
+                <label>Price:</label>
+                <input type="text" id="price" name="price"/>
+            </p>
+            <p>     
+                <input type =  "submit" id = "btn" value = "AddBus" />  
+            </p> 
+        </form>  
+    </div> 
+     
+    // validation for empty field   
+    <script>  
+            function validation()  
+            {  
+                var bname=document.f1.bname.value;  
+                var from=document.f1.from.value;
+                var to=document.f1.to.value;
+                var seat=document.f1.seat.value;
+                var price=document.f1.price.value;
+
+                if(bname.length=="" && from.length==""&& to.length==""&&seat.length==""&&price.length=="") {  
+                    alert("User Name and Password fields are empty");  
+                    return false;  
+                }  
+                else  
+                {  
+                    if(bname.length=="") {  
+                        alert("bus name Name is empty");  
+                        return false;  
+                    }   
+                    if (from.length=="") {  
+                    alert("from field is empty");  
+                    return false;  
+                    } 
+                    if (to.length=="") {  
+                    alert("to field is empty");  
+                    return false; 
+                    } 
+                    if (seat.length=="") {  
+                    alert("seat field is empty");  
+                    return false;  
+                    } 
+                    if (price.length=="") {  
+                    alert("price field is empty");  
+                    return false;  
+                    } 
+                }                             
+            }  
+        </script>  
+</body>     
+</html>  
