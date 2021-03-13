@@ -15,7 +15,7 @@
         $count = mysqli_num_rows($result);  
           
         if($count == 1){  
-            echo header("Location:book_ticket.html"); 
+            echo header("Location:agent_1.html"); 
         }  
         else{  
             echo "<h1> Login failed. Invalid username or password.</h1>";  
